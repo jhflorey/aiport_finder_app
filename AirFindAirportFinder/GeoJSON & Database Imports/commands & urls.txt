@@ -1,0 +1,15 @@
+// URLS
+https://docs.mongodb.com/manual/applications/geospatial-indexes/
+https://docs.mongodb.com/manual/reference/geojson/#point
+http://tugdualgrall.blogspot.com/2014/08/introduction-to-mongodb-geospatial.html
+
+// COMMANDS
+
+// Import Collections
+mongorestore --collection airports --db airfind airports.bson
+mongorestore --collection states --db airfind states.bson
+
+
+// In Mongo Shell
+db.airports.ensureIndex( { "loc" : "2dsphere" } );
+
